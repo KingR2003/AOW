@@ -26,5 +26,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# large media (host on CDN instead)
+# large media (host on CDN/cloud storage instead)
 *.mp4
+public/images/
