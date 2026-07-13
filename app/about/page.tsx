@@ -22,6 +22,7 @@ function VideoPlayer() {
         className="w-full h-auto rounded-lg"
         controls
         preload="auto"
+        poster="/images/aboutpage/3d-render-low-poly-network-communications-background-with-plexus-design 1.png"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       >
