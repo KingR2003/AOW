@@ -1,5 +1,53 @@
+"use client";
+
 import Image from "next/image";
 import { Play } from "lucide-react";
+import { useState, useRef } from "react";
+
+function VideoPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  return (
+    <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
+      <video
+        ref={videoRef}
+        className="w-full h-auto rounded-lg"
+        controls
+        preload="metadata"
+        poster="/images/aboutpage/about_video.png"
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+      >
+        <source
+          src="/images/aboutpage/about_video.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      
+      {/* Play Button Overlay */}
+      {!isPlaying && (
+        <button
+          onClick={handlePlayClick}
+          className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-all duration-300 rounded-lg group"
+          aria-label="Play video"
+        >
+          <div className="w-24 h-24 bg-[#00418d] rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+            <Play className="w-12 h-12 text-white ml-1 fill-white" />
+          </div>
+        </button>
+      )}
+    </div>
+  );
+}
 
 export default function AboutPage() {
   return (
@@ -210,20 +258,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-[#00418d] mb-8 text-center">
             Watch Our Story
           </h2>
-          <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
-            <video
-              className="w-full h-auto rounded-lg"
-              controls
-              preload="metadata"
-              poster="/images/aboutpage/about_video.png"
-            >
-              <source
-                src="/images/aboutpage/about_video.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <VideoPlayer />
         </div>
       </section>
     </>
