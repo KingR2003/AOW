@@ -54,94 +54,94 @@ export default function WhyChooseSection() {
           Experience the difference SkillKwiz can make in your organization.
         </p>
 
-        {/* Card container with increased height to match image */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-16 relative h-[450px] md:h-[400px]">
-          {/* Skill Library Card - Tilted Left */}
-          <div
-            className="bg-white rounded-lg p-6 text-black max-w-xs w-full md:w-64 md:h-[350px] md:absolute md:left-[calc(50%-280px)] md:top-4 shadow-lg z-10 cursor-pointer"
-            style={{ transform: "rotate(-25deg)", transition: "transform 0.4s ease" }}
-            onMouseEnter={e => (e.currentTarget.style.transform = "rotate(-8deg) translateY(-8px)")}
-            onMouseLeave={e => (e.currentTarget.style.transform = "rotate(-25deg)")}
-          >
-            <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-[#c3dfff] rounded-full flex items-center justify-center overflow-hidden">
-                <img
-                  src="/images/homepage/books.gif"
-                  alt=""
-                  className="w-20 h-20 object-cover"
-                  aria-hidden="true"
-                />
+        {/* Card container with improved layout */}
+        <div className="relative w-full mb-16 py-12">
+          {/* Flex row for desktop, stack for mobile */}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-4 md:h-auto">
+            {/* Skill Library Card - Tilted Left */}
+            <div
+              className="bg-white rounded-lg p-6 text-black w-full md:w-72 shadow-lg z-10 cursor-pointer transition-all duration-300 hover:shadow-xl"
+              style={{ transform: "rotate(-8deg)", transition: "transform 0.4s ease" }}
+              onMouseEnter={e => (e.currentTarget.style.transform = "rotate(-4deg) translateY(-8px) scale(1.05)")}
+              onMouseLeave={e => (e.currentTarget.style.transform = "rotate(-8deg)")}
+            >
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 bg-[#c3dfff] rounded-full flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/homepage/books.gif"
+                    alt="Skill Library icon"
+                    className="w-20 h-20 object-cover"
+                  />
+                </div>
               </div>
+              <h3 className="text-[#00418d] text-xl font-bold text-center mb-3">
+                Skill Library
+              </h3>
+              <p className="text-gray-700 text-center text-sm">
+                Access our extensive library of skill assessments covering
+                technical, professional, and soft skills for comprehensive
+                candidate evaluation.
+              </p>
             </div>
-            <h3 className="text-[#00418d] text-xl font-bold text-center mb-3">
-              Skill Library
-            </h3>
-            <p className="text-gray-700 text-center text-sm">
-              Access our extensive library of skill assessments covering
-              technical, professional, and soft skills for comprehensive
-              candidate evaluation.
-            </p>
-          </div>
 
-          {/* Secure Testing Card - Center */}
-          <div
-            className="bg-white rounded-lg p-6 text-black max-w-xs w-full md:w-64 md:h-[350px] md:z-20 shadow-lg md:absolute md:left-[calc(50%-130px)] cursor-pointer"
-            style={{ transition: "transform 0.4s ease" }}
-            onMouseEnter={e => (e.currentTarget.style.transform = "translateY(-12px) scale(1.03)")}
-            onMouseLeave={e => (e.currentTarget.style.transform = "none")}
-          >
-            <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-[#c3dfff] rounded-full flex items-center justify-center overflow-hidden">
-                <img
-                  src="/images/homepage/guard.gif"
-                  alt=""
-                  className="w-20 h-20 object-cover"
-                  aria-hidden="true"
-                />
+            {/* Secure Testing Card - Center */}
+            <div
+              className="bg-white rounded-lg p-6 text-black w-full md:w-72 shadow-lg z-20 cursor-pointer transition-all duration-300 hover:shadow-xl"
+              style={{ transition: "transform 0.4s ease" }}
+              onMouseEnter={e => (e.currentTarget.style.transform = "translateY(-12px) scale(1.08)")}
+              onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+            >
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 bg-[#c3dfff] rounded-full flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/homepage/guard.gif"
+                    alt="Secure Testing icon"
+                    className="w-20 h-20 object-cover"
+                  />
+                </div>
               </div>
+              <h3 className="text-[#00418d] text-xl font-bold text-center mb-3">
+                Secure Testing
+              </h3>
+              <p className="text-gray-700 text-center text-sm">
+                Our testing is done in secure content-aware environments.
+                Candidates are authenticated through multiple identification
+                layers including biometric verification such as facial
+                recognition, security numbers, which are then periodically
+                validated throughout the test.
+              </p>
             </div>
-            <h3 className="text-[#00418d] text-xl font-bold text-center mb-3">
-              Secure Testing
-            </h3>
-            <p className="text-gray-700 text-center text-sm">
-              Our testing is done in secure content-aware environments.
-              Candidates are authenticated through multiple identification
-              layers including biometric verification such as facial
-              recognition, security numbers, which are then periodically
-              validated throughout the test.
-            </p>
-          </div>
 
-          {/* Flexible Pricing Card - Tilted Right */}
-          <div
-            className="bg-white rounded-lg p-6 text-black max-w-xs w-full md:w-64 md:h-[350px] md:absolute md:right-[calc(50%-280px)] md:top-4 shadow-lg z-10 cursor-pointer"
-            style={{ transform: "rotate(25deg)", transition: "transform 0.4s ease" }}
-            onMouseEnter={e => (e.currentTarget.style.transform = "rotate(8deg) translateY(-8px)")}
-            onMouseLeave={e => (e.currentTarget.style.transform = "rotate(25deg)")}
-          >
-            <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-[#c3dfff] rounded-full flex items-center justify-center overflow-hidden">
-                <img
-                  src="/images/homepage/dollar.gif"
-                  alt=""
-                  className="w-20 h-20 object-cover"
-                  aria-hidden="true"
-                />
+            {/* Flexible Pricing Card - Tilted Right */}
+            <div
+              className="bg-white rounded-lg p-6 text-black w-full md:w-72 shadow-lg z-10 cursor-pointer transition-all duration-300 hover:shadow-xl"
+              style={{ transform: "rotate(8deg)", transition: "transform 0.4s ease" }}
+              onMouseEnter={e => (e.currentTarget.style.transform = "rotate(4deg) translateY(-8px) scale(1.05)")}
+              onMouseLeave={e => (e.currentTarget.style.transform = "rotate(8deg)")}
+            >
+              <div className="flex justify-center mb-4">
+                <div className="w-16 h-16 bg-[#c3dfff] rounded-full flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/images/homepage/dollar.gif"
+                    alt="Flexible Pricing icon"
+                    className="w-20 h-20 object-cover"
+                  />
+                </div>
               </div>
+              <h3 className="text-[#00418d] text-xl font-bold text-center mb-3">
+                Flexible Pricing
+              </h3>
+              <p className="text-gray-700 text-center text-sm">
+                Our pricing model is designed to scale with your needs. Pay only
+                for what you use with our credit-based system. Larger
+                organizations can benefit from our Enterprise plan with unlimited
+                testing and custom features.
+              </p>
             </div>
-            <h3 className="text-[#00418d] text-xl font-bold text-center mb-3">
-              Flexible Pricing
-            </h3>
-            <p className="text-gray-700 text-center text-sm">
-              Our pricing model is designed to scale with your needs. Pay only
-              for what you use with our credit-based system. Larger
-              organizations can benefit from our Enterprise plan with unlimited
-              testing and custom features.
-            </p>
           </div>
         </div>
 
-        <div className="text-center mt-32 md:mt-24 relative z-20">
+        <div className="text-center mt-12 md:mt-16 relative z-20">
           <h3 className="text-2xl font-bold mb-4">
             Join the Talent Revolution
           </h3>

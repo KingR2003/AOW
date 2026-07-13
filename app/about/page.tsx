@@ -207,11 +207,14 @@ export default function AboutPage() {
       {/* Video Section */}
       <section className="w-full bg-white py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="relative">
+          <h2 className="text-3xl font-bold text-[#00418d] mb-8 text-center">
+            Watch Our Story
+          </h2>
+          <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
             <video
               className="w-full h-auto rounded-lg"
               controls
-              preload="none"
+              preload="metadata"
               poster="/images/aboutpage/about_video.png"
             >
               <source
@@ -220,11 +223,6 @@ export default function AboutPage() {
               />
               Your browser does not support the video tag.
             </video>
-            {/* <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 bg-[#00418d] rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-90 transition-all">
-                <Play className="w-10 h-10 text-white ml-1" />
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
