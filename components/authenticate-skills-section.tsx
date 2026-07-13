@@ -6,28 +6,24 @@ export default function AuthenticateSkillsSection() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left side stacked images */}
-          <div className="relative w-full md:w-1/3 h-[500px] perspective">
-            <div className="absolute inset-0 group">
-              {/* Back image */}
-              <div className="absolute top-6 left-6 w-[80%] h-[80%] transform group-hover:translate-y-4 group-hover:translate-x-4 transition-transform duration-500">
-                <Image
-                  src="/images/homepage/skills_2.png"
-                  alt="Professional in tech environment"
-                  width={350}
-                  height={500}
-                  className="rounded-lg object-cover w-full h-full shadow-lg"
-                />
-              </div>
-              {/* Front image */}
-              <div className="absolute top-0 left-0 w-[80%] h-[80%] transform group-hover:-translate-y-3 group-hover:-translate-x-3 transition-transform duration-500 z-10">
-                <Image
-                  src="/images/homepage/skills_1.png"
-                  alt="Professional working at night"
-                  width={350}
-                  height={500}
-                  className="rounded-lg object-cover w-full h-full shadow-xl"
-                />
-              </div>
+          <div className="relative w-full md:w-1/3 h-[550px]">
+            <div className="absolute top-0 left-0 w-[70%] h-[65%] group">
+              <Image
+                src="/images/homepage/skills_1.png"
+                alt="Professional working at night"
+                width={350}
+                height={500}
+                className="rounded-lg object-cover w-full h-full shadow-xl group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="absolute bottom-0 right-0 w-[70%] h-[65%] group">
+              <Image
+                src="/images/homepage/skills_2.png"
+                alt="Professional in tech environment"
+                width={350}
+                height={500}
+                className="rounded-lg object-cover w-full h-full shadow-lg group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </div>
 
@@ -47,28 +43,24 @@ export default function AuthenticateSkillsSection() {
           </div>
 
           {/* Right side stacked images */}
-          <div className="relative w-full md:w-1/3 h-[500px] perspective">
-            <div className="absolute inset-0 group">
-              {/* Back image */}
-              <div className="absolute top-6 right-6 w-[80%] h-[80%] transform group-hover:-translate-y-4 group-hover:-translate-x-4 transition-transform duration-500">
-                <Image
-                  src="/images/homepage/skills_4.png"
-                  alt="Business professional looking at digital interface"
-                  width={350}
-                  height={500}
-                  className="rounded-lg object-cover w-full h-full shadow-lg"
-                />
-              </div>
-              {/* Front image */}
-              <div className="absolute top-0 right-0 w-[80%] h-[80%] transform group-hover:translate-y-3 group-hover:translate-x-3 transition-transform duration-500 z-10">
-                <Image
-                  src="/images/homepage/skills_3.png"
-                  alt="Professional at workstation"
-                  width={350}
-                  height={500}
-                  className="rounded-lg object-cover w-full h-full shadow-xl"
-                />
-              </div>
+          <div className="relative w-full md:w-1/3 h-[550px]">
+            <div className="absolute top-0 right-0 w-[70%] h-[65%] group">
+              <Image
+                src="/images/homepage/skills_3.png"
+                alt="Professional at workstation"
+                width={350}
+                height={500}
+                className="rounded-lg object-cover w-full h-full shadow-xl group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="absolute bottom-0 left-0 w-[70%] h-[65%] group">
+              <Image
+                src="/images/homepage/skills_4.png"
+                alt="Business professional looking at digital interface"
+                width={350}
+                height={500}
+                className="rounded-lg object-cover w-full h-full shadow-lg group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </div>
         </div>
