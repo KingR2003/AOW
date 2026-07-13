@@ -16,7 +16,7 @@ export default function AuthenticateSkillsSection() {
                 className="rounded-lg object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-0 left-[10%] w-[80%] h-[80%] transform -rotate-6 hover:rotate-0 transition-transform duration-300">
+            <div className="absolute bottom-0 left-[10%] w-[80%] h-[80%] transform -rotate-6 hover:rotate-0 transition-transform duration-300 z-20">
               <Image
                 src="/images/homepage/skills_2.png"
                 alt="Professional in tech environment"
@@ -53,7 +53,7 @@ export default function AuthenticateSkillsSection() {
                 className="rounded-lg object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-0 right-[10%] w-[80%] h-[80%] transform rotate-6 hover:rotate-0 transition-transform duration-300">
+            <div className="absolute bottom-0 right-[10%] w-[80%] h-[80%] transform rotate-6 hover:rotate-0 transition-transform duration-300 z-20">
               <Image
                 src="/images/homepage/skills_4.png"
                 alt="Business professional looking at digital interface"
