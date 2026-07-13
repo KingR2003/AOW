@@ -21,8 +21,7 @@ function VideoPlayer() {
         ref={videoRef}
         className="w-full h-auto rounded-lg"
         controls
-        preload="metadata"
-        poster="/images/aboutpage/about_video.png"
+        preload="auto"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       >
